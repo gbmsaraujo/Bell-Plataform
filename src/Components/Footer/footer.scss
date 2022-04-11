@@ -1,0 +1,20 @@
+@import '../../scss/variables.scss';
+
+.ct-footer__content {
+    max-width: 1320px;
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    p{
+        @include formatText($logoIcons-color, $font-text, 24px, 700);
+    }
+    .social-medias{
+        display: flex;
+            img{
+                margin-left: 60px;
+                cursor: pointer;
+            }
+        }
+}
+

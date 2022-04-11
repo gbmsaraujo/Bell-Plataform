@@ -1,0 +1,30 @@
+@import '../../scss/variables.scss';
+
+   .ct-header__content {
+      max-width: 1320px;
+      min-height: 120px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin: 0 auto;
+      padding: 10px;
+
+
+      ul {
+         list-style: none;
+         display: flex;
+      }
+
+      li {
+         margin-left: 20px;
+         @include formatText($font-color, $font-text, 20px, 700);
+         cursor: pointer;
+
+         &:hover {
+            color: rgba(0, 0, 0, 0.555);
+            transition: 0.2s;
+         }
+      }
+   }
