@@ -45,8 +45,6 @@ const Atualizar = () =>{
         
             </section>
  
-
- 
             </main>
           
           <Footer />
