@@ -1,0 +1,93 @@
+@import '../../scss/variables.scss';
+
+@font-face {
+    font-family: 'Gill Sans MT';
+    src: url('../../fonts/gill_sans.ttf');
+}
+
+.ct-login {
+    max-width: 1320px;
+    flex-direction: row;
+    margin-left: 30px;
+    display: flex;
+    min-height: 1024px;
+    flex-wrap: wrap;
+
+}
+
+.ct-login__aside {
+    max-width: 688px;
+    display: flex;
+    flex-direction: column;
+    background: $aside-color;
+
+    h1 {
+        margin: 120px 199px 44px 182px;
+        @include formatText ($logoIcons-color, $font-logo, 45px, 700);
+        text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.44);
+    }
+
+    p {
+        @include formatText ($font-color, $font-logo, 25px, 700);
+        margin-left: 105px;
+        display: inline-block;
+    }
+
+
+}
+
+
+.ct-login__section {
+    max-width: 630px;
+    background-color: #4f52ff26;
+
+    img {
+        margin: 233px 195px 83px;
+    }
+
+    p {
+        margin-top: 77px;
+        margin-left: 165px;
+        @include formatText (black, $font-text, 20px, 700)
+    }
+    
+
+}
+
+.clique-cadastro{
+    @include formatText ($logoIcons-color, $font-text, 18px, 600);
+    cursor: pointer;
+    
+}
+
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    width: 490px;
+    margin-left: 65px;
+    margin-bottom: 48px;
+
+    label {
+        @include formatText ($logoIcons-color, $font-text, 20px, 600);
+        margin-bottom: 48px;
+    }
+
+    input {
+        border: none;
+        border-bottom: 1px solid $logoIcons-color;
+        background: none;
+        outline: none;
+        @include formatText(black, $font-text, 16px, 600)
+    }
+
+}
+
+.btn-login {
+    @include btnConfig($font-color, 168px, 50px, $btnLogo-color, 5px, 20px);
+    margin-left: 347px;
+    &:hover{
+        background-color:  #d7423a;
+        transition: 0.2s;
+    }
+}

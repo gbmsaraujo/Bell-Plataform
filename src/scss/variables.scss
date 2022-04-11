@@ -1,0 +1,35 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+
+//Colors
+$logoIcons-color:#1A0F91;
+$box-color:#181CF080;
+$btnLogo-color:#E9605A;
+$font-color:#FFFFFF;
+$bg-color:radial-gradient(100.24% 160.19% at 97.74% 0%, #B4DEF4 0%, rgba(59, 112, 150, 0.619792) 0%, #676AFF 0.01%, #65AACF 51.04%, #BEE0F2 100%);
+$aside-color:radial-gradient(100% 163.23% at 0% 100%, #7DC8F0 0%, rgba(59, 112, 150, 0.619792) 0%, #676AFF 0.01%, #65AACF 45.68%, #BEE0F2 100%);
+
+//Fonts
+
+$font-text: 'Open Sans', sans-serif;
+$font-logo:'Gill Sans MT';
+
+@mixin formatText ($color, $family, $size, $weight) {
+    color:$color;
+    font-family: $family;
+    font-size: $size;
+    font-weight: $weight;
+
+}
+
+@mixin btnConfig ($color, $width, $height, $bgcolor,$radius, $size) {
+    color:$color;
+    width: $width;
+    height: $height;
+    background-color: $bgcolor;
+    border-radius: $radius ;
+    font-size: $size;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
