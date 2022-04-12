@@ -1,6 +1,6 @@
-const Botao = ({clique, login, cadastrar,atualizar, tipo, classe}) =>{
+const Botao = ({clique, login, cadastrar, atualizar, tipo, classe, event}) =>{
     return(
-        <button type={tipo} className={classe}>{[clique, login, cadastrar,atualizar]}</button>
+        <button type={tipo} className={classe} onClick={event}>{[clique, login, cadastrar,atualizar]}</button>
     )
 }
 

@@ -1,15 +1,15 @@
 import "./header.scss";
 import Logo from "./imgs/Logo.svg";
 
-const Header = ({ home, cadastro, usuarios, atualizar, sair }) => {
+const Header = ({ home, cadastro, usuarios, atualizar, sair, exitFunction, homeFunction, userFunction, updateFunction }) => {
 	const menu = () => {
 		if (cadastro === "cadastro") {
 			return (
 				<>
-					<li> Home </li>
-					<li> Usuarios </li>
-					<li>Atualiza</li>
-					<li> Sair </li>
+					<li onClick={homeFunction}> Home </li>
+					<li onClick={userFunction}> Usuarios </li>
+					<li onClick={updateFunction}> Atualizar </li>
+					<li onClick={exitFunction}> Sair </li>
 				</>
 			);
 		} else if (usuarios === "usuarios") {
@@ -18,7 +18,7 @@ const Header = ({ home, cadastro, usuarios, atualizar, sair }) => {
 					<li> Home </li>
 					<li> Cadastrar </li>
 					<li> Atualizar </li>
-					<li> Sair </li>
+					<li onClick={exitFunction}> Sair </li>
 				</>
 			);
 		} else if (atualizar === "atualizar") {
@@ -27,7 +27,7 @@ const Header = ({ home, cadastro, usuarios, atualizar, sair }) => {
 					<li> Home </li>
 					<li> Cadastrar </li>
 					<li> Usuários </li>
-					<li> Sair </li>
+					<li onClick={exitFunction}> Sair </li>
 				</>
 			);
 		} else if (home === "home") {
@@ -42,7 +42,7 @@ const Header = ({ home, cadastro, usuarios, atualizar, sair }) => {
 		} else {
 			return (
 				<>
-					<li> Sair </li>
+					<li onClick={exitFunction}> Sair </li>
 				</>
 			);
 		}

@@ -1,11 +1,10 @@
 import './App.scss';
-import Usuarios from './views/Usuarios';
-
+import Router from './router';
 
 function App() {
   return (
     <div className="App">
-  <Usuarios/>
+      <Router />
     </div>
   );
 }
