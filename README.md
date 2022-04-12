@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# Bell Plataform
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Desafio proposto para construir um sistema de cadastramento do Usuário, protótipo feito pelo figma. Foi utilizada a API enviada pela empresa para validar o login, cadastrar usuários com foto, listar todos os usuários cadastrados, pesquisar o usuário pelo id e ver a foto do usuário.
 
-## Available Scripts
+# Tecnologias Utilizadas
 
-In the project directory, you can run:
+<ul>
+  <li>React</li>
+  <li>Sass</li>
+  <li>Javascript</li>
+ </ul>
+ 
+ # Como executar o Front-end?
+ 
+ É importante que você tenha o Node. Clone o Projeto, abra-o com o VS Code e no terminal execute o comando <stronger> npm install </stronger>.
+ 
+ # Como executar a API?
+ 
+ Para executar, é importante que você tenha o Node instalado em sua máquina e a API que está disponível aqui: <a href='https://drive.google.com/drive/folders/1LD2PKjLURxmqjE8D7McQxmamGt0qC-sp?usp=sharing'>API Cadastro</a>. Utilize o Insomnia para rodar a API e ter acesso a todas as rotas. 
+ 
+# Orientações:
+ 
+url = https://cherry-custard-19143.herokuapp.com/api/v1
+Login: seuemail@dominio.com.br (Ex: pessoa@gmail.com)
+Senha: password (literalmente é só digitar 'password' no campo de senha)
 
-### `npm start`
+<ul>
+  <li> /token - gera o token de autenticação (post) </li>
+  <li> /user/create - criar novos usuários (post) </li>
+  <li> /user/list - listar todos os usuários (get) </li>
+  <li> /user/view/{id} - mostrar dados de apenas um usuário (get) </li>
+  <li> /user/update - atualiza cadastro de usuário (post) </li>
+  <li> /photo/save - cadastra foto de usuário (post) </li>
+  <li> /photo/update - atualiza a foto do usuário (post) </li>
+  <li> /photo/view/{user_id} - mostra foto do usuário (get) </li>
+</ul>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# Observações
+ 
+<ul>
+  <li>Em termos de layout: a parte de responsividade ainda não foi feita, mas pretendo aprimorar o projeto para incluir no meu portfólio; </li>
+  <li>Ainda estou finalizando a parte de autenticação na API que foi enviada para mim; </li>
+  <li>Futuramente disponibilizarei uma API feita por mim em Node.js, utilizando MySql e o ORM Sequelize para fazer alguns aprimoramentos no projeto e colocar em práticas meus conhecimentos em Node.js</li>
+  <li> O Projeto estará em constante atualização </li>
+</ul>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
