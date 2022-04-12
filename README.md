@@ -34,7 +34,8 @@ Senha: password (literalmente é só digitar 'password' no campo de senha)
   <li> /photo/update - atualiza a foto do usuário (post) </li>
   <li> /photo/view/{user_id} - mostra foto do usuário (get) </li>
 </ul>
- # Observações
+
+# Observações
  
 <ul>
   <li>Em termos de layout: a parte de responsividade ainda não foi feita, mas pretendo aprimorar o projeto para incluir no meu portfólio; </li>
