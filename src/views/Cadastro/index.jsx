@@ -7,42 +7,40 @@ import Header from "../../Components/Header";
 import "./cadastro.scss";
 
 const Cadastro = () => {
-
 	const [name, setName] = useState();
 	const [email, setEmail] = useState();
 	const [mobile_phone, setMobile] = useState();
-	const [id, setId] = useState()
-	const [send, setSend] = useState (false)
+	const [id, setId] = useState();
+	const [send, setSend] = useState(false);
 
-	const navigate = useNavigate()
+	const navigate = useNavigate();
 	const filesElement = useRef(null);
-	const cookie = `Bearer ${document.cookie.split("=")[1]}`
-
-
+	const cookie = `Bearer ${document.cookie.split("=")[1]}`;
 
 	const sendFile = async () => {
 		const dataForm = new FormData();
-        for (const file of filesElement.current.files) {
-      	dataForm.append('file', file);
-    }
-		dataForm.append('email', email)
-		dataForm.append('user_id', id)
-		const response = await axios.post("https://cherry-custard-19143.herokuapp.com/api/v1/photo/save", 
-		dataForm,
-		{ headers: { Authorization: cookie } });
-		
+		for (const file of filesElement.current.files) {
+			dataForm.append("file", file);
+		}
+		dataForm.append("email", email);
+		dataForm.append("user_id", id);
+		const response = await axios.post(
+			"https://cherry-custard-19143.herokuapp.com/api/v1/photo/save",
+			dataForm,
+			{ headers: { Authorization: cookie } }
+		);
+
 		console.log(response);
-		alert('Upload da Foto Realizada com Sucesso')
-		navigate('/home')
+		alert("Upload da Foto Realizada com Sucesso");
+		navigate("/home");
 	};
 
 	const handleSubmission = async () => {
-
-		const sendData ={
+		const sendData = {
 			name,
 			email,
-			mobile_phone
-		}
+			mobile_phone,
+		};
 		try {
 			const responseUser = await axios.post(
 				"https://cherry-custard-19143.herokuapp.com/api/v1/user/create",
@@ -50,18 +48,13 @@ const Cadastro = () => {
 				{ headers: { Authorization: cookie } }
 			);
 			console.log(responseUser.data);
-			setId(responseUser.data.result.id)
-			setSend(true)
-			alert('Cadastro Efetuado Com Sucesso')
+			setId(responseUser.data.result.id);
+			setSend(true);
+			alert("Cadastro Efetuado Com Sucesso");
 		} catch (err) {
 			console.log(err);
 		}
 	};
-
-	const teste = () =>{
-		console.log(cookie)
-		console.log(id)
-	}
 
 	return (
 		<div className="ct-cadastro">
@@ -113,23 +106,27 @@ const Cadastro = () => {
 						event={handleSubmission}
 					/>
 
-				{send==true ? <form className="formgp-picture">
-						<div>
-							<label htmlFor="picture">Selecione Uma Foto</label>
-							<input
-								type="file"
-								id="picture"
-								multiple ref={filesElement}
+					{send === true ? (
+						<form className="formgp-picture">
+							<div>
+								<label htmlFor="picture">
+									Selecione Uma Foto
+								</label>
+								<input
+									type="file"
+									id="picture"
+									multiple
+									ref={filesElement}
+								/>
+							</div>
+							<Botao
+								classe="btn-upload"
+								tipo="button"
+								cadastrar="Upload"
+								event={sendFile}
 							/>
-						</div>
-						<Botao classe="btn-upload"
-						tipo="button"
-						cadastrar="Upload" 
-						event={sendFile}/>
-					</form>: null}
-
-
-					{/* <button onClick={teste}> teste </button> */}
+						</form>
+					) : null}
 				</section>
 			</main>
 

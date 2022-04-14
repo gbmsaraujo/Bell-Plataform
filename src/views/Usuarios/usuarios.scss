@@ -28,15 +28,11 @@
         @include formatText($font-color, $font-text, 30px, 700);
     } table{
         border-collapse: collapse;
-        tr 
-          th {
+        thead 
+          td {
             border: 1px solid white;
             @include formatText($font-color, $font-text, 18px, 600)
         }
-         td{
-          @include formatText(black, $font-text, 18px, 600);
-            border: 1px solid white;
-            text-align: center;
-         }
+         
     }  
 }
