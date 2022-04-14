@@ -39,7 +39,6 @@ Senha: password (literalmente é só digitar 'password' no campo de senha)
  
 <ul>
   <li>Em termos de layout: a parte de responsividade ainda não foi feita, mas pretendo aprimorar o projeto para incluir no meu portfólio; </li>
-  <li>Ainda estou finalizando a parte de autenticação na API que foi enviada para mim; </li>
   <li>Futuramente disponibilizarei uma API feita por mim em Node.js, utilizando MySql e o ORM Sequelize para fazer alguns aprimoramentos no projeto e colocar em práticas meus conhecimentos em Node.js</li>
   <li> O Projeto estará em constante atualização </li>
 </ul>
