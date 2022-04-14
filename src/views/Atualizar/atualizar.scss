@@ -1,74 +1,98 @@
-@import '../../scss/variables.scss';
+@import "../../scss/variables.scss";
 
-.ct-atualizar{
-    background: $bg-color;
-  
+.ct-atualizar {
+	background: $bg-color;
 }
 
-.ct-atualizar__main{
-    max-width: 1320px;
-    min-height: 1024px;
- }
-
-.ct-atualizar__section{
-    width: 853px;
-    height: 800px;
-    margin: 80px 302px 0 285px;
-    background: $box-color;
-    border-radius: 10px;
-    box-shadow: -7px 6px 4px 0px #00000040;
-    display: flex;
-    flex-direction: column;
-
-      h2{
-        margin-top: 20px;
-        margin-left: 267px;
-        margin-bottom: 20px;
-        @include formatText($font-color, $font-text, 30px, 700);
-    } 
-
-    select {
-        width: 460px;
-        height: 60px;
-        border: none;
-        outline: none;
-        border-radius: 5px;
-        margin-left: 196px;
-        margin-bottom: 40px;
-        @include formatText(black, $font-text, 18px, 600);
-     }
-      
+.ct-atualizar__main {
+	max-width: 1320px;
+	min-height: 1024px;
 }
-    
+
+.ct-atualizar__section {
+	width: 853px;
+	height: 800px;
+	margin: 80px 302px 0 285px;
+	background: $box-color;
+	border-radius: 10px;
+	box-shadow: -7px 6px 4px 0px #00000040;
+	display: flex;
+	flex-direction: column;
+
+	h2 {
+		margin-top: 20px;
+		margin-left: 267px;
+		margin-bottom: 20px;
+		@include formatText($font-color, $font-text, 30px, 700);
+	}
+
+	select {
+		width: 460px;
+		height: 60px;
+		border: none;
+		outline: none;
+		border-radius: 5px;
+		margin-left: 196px;
+		margin-bottom: 40px;
+		@include formatText(black, $font-text, 18px, 600);
+	}
+}
+
 .form-group {
-        display: flex;
-        flex-direction: column;
-        width: 490px;
-        margin-left: 65px;
-        margin-bottom: 48px;
-    
-        label {
-            @include formatText ($font-color, $font-text, 20px, 600);
-            margin-bottom: 25px;
-        }
-    
-        input {
-            border: none;
-            border-bottom: 1px solid $font-color;
-            background: none;
-            outline: none;
-            @include formatText(rgb(246, 246, 246), $font-text, 16px, 600);
+	display: flex;
+	flex-direction: column;
+	width: 490px;
+	margin-left: 65px;
+	margin-bottom: 48px;
 
-        }
-    
-    }
-    
+	label {
+		@include formatText($font-color, $font-text, 20px, 600);
+		margin-bottom: 25px;
+	}
+
+	input {
+		border: none;
+		border-bottom: 1px solid $font-color;
+		background: none;
+		outline: none;
+		@include formatText(rgb(246, 246, 246), $font-text, 16px, 600);
+	}
+}
+
+.formgp-picture-update {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	width: 490px;
+	margin-left: 65px;
+	margin-top: 48px;
+
+	label {
+		@include formatText($font-color, $font-text, 20px, 600);
+		margin-bottom: 25px;
+	}
+
+	input {
+		border: none;
+		background: none;
+		outline: none;
+		@include formatText(rgb(246, 246, 246), $font-text, 16px, 600);
+	}
+}
+
+.btn-upload-update {
+	@include btnConfig($font-color, 150px, 50px, $btnLogo-color, 5px, 20px);
+	&:hover {
+		background-color: #d7423a;
+		transition: 0.2s;
+	}
+}
 
 .btn-send {
-    @include btnConfig($font-color, 168px, 50px, $btnLogo-color, 5px, 20px);
-    margin-left: 347px;
-    &:hover{
-        background-color:  #d7423a;
-        transition: 0.2s;
-    }
+	@include btnConfig($font-color, 168px, 50px, $btnLogo-color, 5px, 20px);
+	margin-left: 347px;
+	&:hover {
+		background-color: #d7423a;
+		transition: 0.2s;
+	}
 }

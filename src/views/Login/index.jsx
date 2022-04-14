@@ -7,12 +7,12 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 const Login = () => {
+	//States e Hooks
 	const [email, setEmail] = useState();
 	const [pwd, setPwd] = useState();
-
 	const navigate = useNavigate();
-	
 
+	//Função de Login
 	const handleLogin = async () => {
 		const auth = {
 			email,
@@ -20,14 +20,22 @@ const Login = () => {
 		};
 		try {
 			const response = await axios.post(
-				"https://cherry-custard-19143.herokuapp.com/api/v1/token",auth);
-			document.cookie = `auth=${response.data.token};expires=${new Date(2100,0,1)}`;
+				"https://cherry-custard-19143.herokuapp.com/api/v1/token",
+				auth
+			);
+
+			document.cookie = `auth=${response.data.token};expires=${new Date(
+				2100,
+				0,
+				1
+			)}`;
+
 			alert("Login Efetuado com Sucesso!");
 			navigate("/home");
 			setEmail("");
 			setPwd("");
 		} catch (err) {
-			alert("Verifique seus dados e Tente novamente!!");
+			alert("Verifique seus dados e Tente novamente!");
 		}
 	};
 
