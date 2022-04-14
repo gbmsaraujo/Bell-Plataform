@@ -20,7 +20,7 @@ Desafio proposto para construir um sistema de cadastramento do Usuário, protót
  
 # Orientações:
  
-url = https://cherry-custard-19143.herokuapp.com/api/v1
+url da API = https://cherry-custard-19143.herokuapp.com/api/v1
 Login: seuemail@dominio.com.br (Ex: pessoa@gmail.com)
 Senha: password (literalmente é só digitar 'password' no campo de senha)
 
