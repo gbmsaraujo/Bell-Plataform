@@ -51,12 +51,44 @@
         }
     
     }
+
+    .formgp-picture{
+        display: flex;
+        flex-direction:row;
+        align-items: center;
+        width: 490px;
+        margin-left: 65px;
+        margin-top: 48px;
+    
+        label {
+            @include formatText ($font-color, $font-text, 20px, 600);
+            margin-bottom: 25px;
+        }
+    
+        input {
+            border: none;
+            background: none;
+            outline: none;
+            @include formatText(rgb(246, 246, 246), $font-text, 16px, 600);
+
+        }
+
+        
+    }
+
+    .btn-upload{
+        @include btnConfig($font-color, 100px, 50px, $btnLogo-color, 5px, 20px);
+        &:hover{
+            background-color:  #d7423a;
+            transition: 0.2s;
+        }
+    }
     
 
 
 
 .btn-send {
-    @include btnConfig($font-color, 168px, 50px, $btnLogo-color, 5px, 20px);
+    @include btnConfig($font-color, 168px, 50px, $btnLogo-color, 5px, 15px);
     margin-left: 347px;
     &:hover{
         background-color:  #d7423a;
