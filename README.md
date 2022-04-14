@@ -41,5 +41,6 @@ Senha: password (literalmente é só digitar 'password' no campo de senha)
   <li>Em termos de layout: a parte de responsividade ainda não foi feita, mas pretendo aprimorar o projeto para incluir no meu portfólio; </li>
   <li>Futuramente disponibilizarei uma API feita por mim em Node.js, utilizando MySql e o ORM Sequelize para fazer alguns aprimoramentos no projeto e colocar em práticas meus conhecimentos em Node.js</li>
   <li> O Projeto estará em constante atualização </li>
+  <li> Não utilizei context API pois é um tópico que ainda estou estudando, porém futuramente posso atualizar utilizando esta ferramenta </li>
 </ul>
 
